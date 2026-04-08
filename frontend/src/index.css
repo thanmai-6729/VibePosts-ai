@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F97316;
+  --color-primary-light: #FB923C;
+  --color-primary-dark: #EA580C;
+  --color-mood-happy: #22C55E;
+  --color-mood-stress: #EF4444;
+  --color-mood-focus: #3B82F6;
+  --color-mood-default: #F97316;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@utility transition-all-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility mood-accent-happy {
+  @apply border-mood-happy text-mood-happy ring-mood-happy/20;
+}
+
+@utility mood-accent-stress {
+  @apply border-mood-stress text-mood-stress ring-mood-stress/20;
+}
+
+@utility mood-accent-focus {
+  @apply border-mood-focus text-mood-focus ring-mood-focus/20;
+}
+
+@utility mood-accent-default {
+  @apply border-primary text-primary ring-primary/20;
+}
